@@ -1,0 +1,21 @@
+<div id="wrapper">
+  <div id="logo">
+    <%= image_tag 'leikir.png' %>
+  </div>
+
+  <% if @match_layout.is_playing? %>
+
+    <div id="score">
+      <div id="match"><%= @match_layout.match_name %></div>
+      <div id="player1" class="player">
+        <div class="name"><%= @match_layout.player1_name %></div>
+        <div class="score"><%= @match_layout.player1_score %></div>
+      </div>
+      <div id="player2" class="player">
+        <div class="name"><%= @match_layout.player2_name %></div>
+        <div class="score"><%= @match_layout.player2_score %></div>
+      </div>
+    </div>
+
+  <% end %>
+</div>

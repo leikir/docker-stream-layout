@@ -1,0 +1,47 @@
+<%= form_with(model: match_layout, id: 'match-layout-form') do |form| %>
+  <% if match_layout.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(match_layout.errors.count, "error") %> prohibited this match_layout from being saved:</h2>
+
+      <ul>
+        <% match_layout.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :is_playing %>
+    <%= form.check_box :is_playing %>
+  </div>
+
+  <div class="field">
+    <%= form.label :player1_name %>
+    <%= form.text_field :player1_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :player2_name %>
+    <%= form.text_field :player2_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :match_name %>
+    <%= form.text_field :match_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :player1_score %>
+    <%= form.number_field :player1_score %>
+  </div>
+
+  <div class="field">
+    <%= form.label :player2_score %>
+    <%= form.number_field :player2_score %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
