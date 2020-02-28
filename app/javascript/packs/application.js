@@ -4,6 +4,8 @@ Rails.start()
 // require("@rails/activestorage").start()
 // require("channels")
 
+require("jquery")
+
 // FORM
 const handleForm = function() {
   const form = $('form#match-layout-form')[0];

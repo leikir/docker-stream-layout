@@ -3,38 +3,68 @@
   margin: 0
   width: 1920px
   height: 1080px
-  background-image: image-url('bg1.png')
-  background-repeat: no-repeat
-  background-size: contain
+  position: fixed
+  top: 0
+  left: 0
 
-  #wrapper
-    padding-left: 10px
-    padding-top: 5px
+  #background-img
+    position: absolute
+    top: 0
+    left: 0
+    width: 1920px
+    height: 1080px
+    background-color: black
 
   #logo
+    $width: 400px
+    position: absolute
+    bottom: 12px
+    left: ((1920px / 2) - ($width / 2))
+    width: $width
+    text-align: center
+
     img
       height: 64px
 
-  #score
-    display: inline-block
-    background: rgba(0,0,0,0.6)
-    padding: 10px 15px
-    text-align: left
-    color: white
-    font-family: Roboto, Arial
-    font-size: 18px
-
   #match
-    border-bottom: 1px solid white
-    margin-bottom: 10px
+    $width: 300px
+    position: absolute
+    top: 0
+    left: ((1920px / 2) - ($width / 2))
+    width: $width
+    text-align: center
+    font-family: Roboto, Arial
+    font-weight: bold
+    font-size: 30px
+    line-height: 46px
+    color: white
 
-  .player
-    .name
-      display: inline-block
-      vertical-align: middle
-      font-weight: bold
-      width: 180px
+  #player1-name, #player2-name, #player1-score, #player2-score
+    position: absolute
+    font-family: Roboto, Arial
+    font-weight: bold
+    line-height: 50px
+    color: white
+    text-align: center
 
-    .score
-      display: inline-block
-      vertical-align: middle
+  #player1-score, #player2-score
+    top: 10px
+    width: 290px
+    font-size: 40px
+
+  #player1-score
+    left: 440px
+
+  #player2-score
+    left: 1190px
+
+  #player1-name, #player2-name
+    bottom: 10px
+    width: 280px
+    font-size: 30px
+
+  #player1-name
+    left: 369px
+
+  #player2-name
+    left: 1270px
