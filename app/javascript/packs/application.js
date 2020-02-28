@@ -6,6 +6,8 @@ Rails.start()
 
 require("jquery")
 
+import './bootstrap_custom.js'
+
 // FORM
 const handleForm = function() {
   const form = $('form#match-layout-form')[0];
